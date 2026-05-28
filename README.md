@@ -1,5 +1,5 @@
 ## F3G-Avatar : Face Focussed Full-body Avatar
-### CVPRW 2026 | [Project Page](https://wjmenu.github.io/F3G-avatar/) | [Paper](https://arxiv.org/abs/2604.09835) | [🤗 Hugging Face](https://huggingface.co/wjmenu/F3G-avatar)
+### CVPRW 2026 | [Project Page](https://wjmenu.github.io/F3G-avatar/) | [GitHub](https://github.com/wjmenu/F3G-avatar) | [Paper](https://arxiv.org/abs/2604.09835) | [🤗 Hugging Face](https://huggingface.co/wjmenu/F3G-avatar)
 
 ![F3G-Avatar pipeline overview](assets/pipeline.png)
 
@@ -13,8 +13,8 @@ Official implementation of **F3G-Avatar**, our method for building animatable fu
 git clone https://github.com/wjmenu/F3G-avatar.git
 cd F3G-avatar
 
-conda create -n animatable_gaussians python=3.10 -y
-conda activate animatable_gaussians
+conda create -n f3g_avatar python=3.10 -y
+conda activate f3g_avatar
 pip install -r requirements.txt
 ```
  

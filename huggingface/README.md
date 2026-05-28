@@ -57,8 +57,8 @@ ckpt = hf_hub_download(
 ```bash
 git clone https://github.com/wjmenu/F3G-avatar.git
 cd F3G-avatar
-conda create -n animatable_gaussians python=3.10 -y
-conda activate animatable_gaussians
+conda create -n f3g_avatar python=3.10 -y
+conda activate f3g_avatar
 pip install -r requirements.txt
 # See README for CUDA extensions, SMPL-X, NeuS2, and MHR template pipeline
 ```
