@@ -23,7 +23,11 @@ RELEASE_PATHS=(
   config.py
   main_avatar.py
   create_template.py
-  assets/pipeline_final0.png
+  assets/pipeline.png
+  assets/result.png
+  index.html
+  style.css
+  nojekyll.txt
   othercode/README.md
   smpl_files/README.md
   smpl_files/mano

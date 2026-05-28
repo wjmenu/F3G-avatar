@@ -1,11 +1,9 @@
 ## F3G-Avatar : Face Focussed Full-body Avatar
-### [Project Page](https://github.com/wjmenu/F3G-avatar) | [Paper](https://arxiv.org/abs/2604.09835) 
+### CVPRW 2026 | [Project Page](https://wjmenu.github.io/F3G-avatar/) | [Paper](https://arxiv.org/abs/2604.09835) 
 
-![F3G-Avatar pipeline overview](assets/pipeline_final0.png)
+![F3G-Avatar pipeline overview](assets/pipeline.png)
 
 Official implementation of **F3G-Avatar**, our method for building animatable full-body human avatars from calibrated multi-view RGB captures.
-
-Given per-frame images, masks, camera calibration, and SMPL-X poses, the pipeline (1) reconstructs a clothed surface mesh with [NeuS2](https://github.com/19reborn/NeuS2), (2) builds an **MHR** (mesh human representation) template that fuses MHR with garment geometry and per-vertex skinning weights, and (3) rasterizes canonical position maps for training. The avatar is driven by StyleAvatar-style networks: a body branch skinned with the MHR template, plus a **face-focused branch** trained on high-resolution head crops for sharper facial detail under full-body motion.
 
 # Installation
 
@@ -19,8 +17,8 @@ conda create -n animatable_gaussians python=3.10 -y
 conda activate animatable_gaussians
 pip install -r requirements.txt
 ```
-
-## 2. Build this diff-gaussian splatting and StyleAvatar
+ 
+## 2. Build diff-gaussian rasterization and StyleAvatar
 
 These CUDA extensions are required for **training and inference** (`AvatarNet` uses DualStyleUNet from [StyleAvatar](https://github.com/LizhenWangT/StyleAvatar)).
 
@@ -150,8 +148,6 @@ Set paths in your YAML under `train`:
 python main_avatar.py -c configs/avatarrex_zzr/avatar.yaml -m train
 ```
 
-If no pretrained checkpoint exists, training starts with a short **canonical pretrain** (Gaussian initialization), saves `net_ckpt_dir/pretrained/`, then runs the main photometric optimization (~800k iterations). Checkpoints go to `net_ckpt_dir/batch_*`, `epoch_*`, and `epoch_latest/`.
-
 ## Evaluation
 
 Set `test.prev_ckpt` to a trained checkpoint (e.g. `./results/avatarrex_zzr/avatar/epoch_latest`) and configure `test.data` or `test.pose_data` for the frames to render:
@@ -176,5 +172,18 @@ We build on the following projects (setup: [Installation](#installation) §4–5
 - [3D Gaussian Splatting](https://github.com/ashawkey/diff-gaussian-rasterization) — differentiable Gaussian rasterization
 
 # Citation
-If you find our code or data is helpful to your research, please consider citing our paper.
+
+If you find our code or data helpful to your research, please consider citing our paper:
+
+```bibtex
+@misc{menu2026f3gavatarfacefocused,
+  title={F3G-Avatar : Face Focused Full-body Gaussian Avatar},
+  author={Willem Menu and Erkut Akdag and Pedro Quesado and Yasaman Kashefbahrami and Egor Bondarev},
+  year={2026},
+  eprint={2604.09835},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2604.09835},
+}
+```
 
