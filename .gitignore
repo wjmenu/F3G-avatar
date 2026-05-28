@@ -178,6 +178,7 @@ tools/smpl_files/
 experiments/
 MHR/
 workflow_*.txt
+huggingface/hf-repo/
 
 *.exe
 
