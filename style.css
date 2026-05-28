@@ -142,7 +142,8 @@ h2{
 .figure,
 .figure-sm,
 .figure-mid,
-.figure-teaser{
+.figure-teaser,
+.figure-wide{
   display:block;
   height:auto;
   margin:10px auto 0;
@@ -154,6 +155,14 @@ h2{
 .figure{
   width:min(100%, 1100px);
   max-height:min(68vh, 720px);
+  object-fit:contain;
+}
+
+.figure-wide{
+  width:min(100%, 1100px);
+  height:auto;
+  max-height:none;
+  object-fit:contain;
 }
 
 .figure-sm{

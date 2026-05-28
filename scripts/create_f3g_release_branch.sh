@@ -24,7 +24,7 @@ RELEASE_PATHS=(
   main_avatar.py
   create_template.py
   assets/pipeline.png
-  assets/result.png
+  assets/result.jpeg
   index.html
   style.css
   nojekyll.txt
