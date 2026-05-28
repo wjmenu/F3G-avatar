@@ -27,7 +27,7 @@ RELEASE_PATHS=(
   assets/result.jpeg
   index.html
   style.css
-  nojekyll.txt
+  .nojekyll
   othercode/README.md
   smpl_files/README.md
   smpl_files/mano
