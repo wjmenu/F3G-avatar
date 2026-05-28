@@ -1,5 +1,5 @@
 ## F3G-Avatar : Face Focussed Full-body Avatar
-### CVPRW 2026 | [Project Page](https://wjmenu.github.io/F3G-avatar/) | [GitHub](https://github.com/wjmenu/F3G-avatar) | [Paper](https://arxiv.org/abs/2604.09835) | [🤗 Hugging Face](https://huggingface.co/wjmenu/F3G-avatar)
+### CVPRW 2026 | [Project Page](https://wjmenu.github.io/F3G-avatar/) | [Paper](https://arxiv.org/abs/2604.09835) | [🤗 Hugging Face](https://huggingface.co/wjmenu/F3G-avatar)
 
 ![F3G-Avatar pipeline overview](assets/pipeline.png)
 
